@@ -5,5 +5,11 @@
   <%= @list.name %>
 </p>
 
+<strong>Tasks</strong>
+<%= render @list.tasks %>
+
+<strong>Add a task</strong>
+<%= render 'tasks/form'%>
+
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>
