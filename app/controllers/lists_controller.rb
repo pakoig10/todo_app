@@ -5,6 +5,11 @@ class ListsController < ApplicationController
   # GET /lists.json
   def index
     @lists = current_user.lists
+    respond_to do |format|
+      format.html 
+      format.json
+      format.pdf {render template: 'lists/report', pdf: 'Lists'}
+    end
   end
 
   # GET /lists/1
