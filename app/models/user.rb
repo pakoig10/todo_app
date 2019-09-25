@@ -5,4 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :lists, dependent: :destroy
   has_one_attached :profile_photo
+
+  after_create :welcome_email
+
+  def welcome_email
+    UserMailer.welcome_email(self).deliver
+  end
 end
