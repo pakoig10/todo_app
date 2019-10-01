@@ -9,6 +9,6 @@ class User < ApplicationRecord
   after_create :welcome_email
 
   def welcome_email
-    UserMailer.welcome_email(self).deliver
+    UserMailerJob.set(wait: 1.minute).perform_later(self)
   end
 end

@@ -13,14 +13,14 @@ Rails.application.configure do
   # }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = {from: 'serasvictoria1410@gmail.com'}
+  config.action_mailer.default_options = {from: 'magnus.ig1098@gmail.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'example.com',
-  user_name:            'Jose Francisco Iglesias Palomares',
-  password:             'jackass98',
+  user_name:            'Magnus Iglesias',
+  password:             'Magnus-ig1098',
   authentication:       'plain',
   enable_starttls_auto: true  }
   # Do not eager load code on boot.

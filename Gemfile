@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
+gem 'sidekiq'
 gem 'devise', git: 'https://github.com/plataformatec/devise'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
