@@ -11,4 +11,12 @@ class User < ApplicationRecord
   def welcome_email
     UserMailerJob.set(wait: 1.minute).perform_later(self)
   end
+
+  def send_email
+    
+  end
+
+  def weeklyEmail
+    UserMailerJob.perform(self)
+  end
 end

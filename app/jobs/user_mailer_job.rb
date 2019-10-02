@@ -4,4 +4,5 @@ class UserMailerJob < ApplicationJob
   def perform(user)
     UserMailer.welcome_email(user)
   end
+
 end
