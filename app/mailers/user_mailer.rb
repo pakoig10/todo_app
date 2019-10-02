@@ -6,4 +6,11 @@ class UserMailer < ApplicationMailer
             :subject => "Welcome"
     )
   end
+
+  def week_email(user)
+    puts "Si entro xd"
+    mail(   :to      => user.email,
+      :subject => "WeeklyEmail"
+    )
+  end
 end

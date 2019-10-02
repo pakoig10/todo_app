@@ -1,0 +1,13 @@
+---
+:verbose: false
+:concurrency: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+:timeout: 30
+:queues:
+ - default
+ - scheduler
+:schedule:
+  perform:
+    queue: scheduler
+    enabled: true
+    class: WeekEmailWorker
+    every: ['1m', first_in: '1s']

@@ -2,7 +2,7 @@
 class UserMailerPreview < ActionMailer::Preview
   def welcome_email
     #@user = User.find(params[:user_id])
-    @user = User.find_by id: '4'
-    UserMailer.welcome_email(@user)
+    @user = User.find_by id: '5'
+    UserMailer.week_email(@user)
    end
 end
